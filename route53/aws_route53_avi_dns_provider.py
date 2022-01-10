@@ -19,73 +19,14 @@ dns_info
         ttl: 123
         type: DNS_RECORD_A
         algorithm: DNS_RECORD_RESPONSE_CONSISTENT_HASH
-        metadata: {'fqdn':'xxx.test.cloud', 'ttl':60, 'type':'DNS_RECORD_A', 'ip_qddress': '192.168.0.5', 'f_ip_address':'34.77.94.138', 'metadata':''}
+        metadata: {'fqdn':'xxx.test.cloud', 'ttl':60, 'type':'DNS_RECORD_A', 'ip_qddress': '192.168.0.5', 'f_ip_address':'33.72.93.135', 'metadata':''}
 
 metadata content is what AVI sends to the script
 # in case we look to the record_info
-metadata: {'fqdn':'xxx.test.cloud', 'ttl':60, 'type':'DNS_RECORD_A', 'ip_qddress': '192.168.0.5', 'f_ip_address':'34.77.94.138', 'metadata':''}
+metadata: {'fqdn':'xxx.test.cloud', 'ttl':60, 'type':'DNS_RECORD_A', 'ip_qddress': '192.168.0.5', 'f_ip_address':'33.72.93.135', 'metadata':''}
 # in case we look to params
 metadata: {'ACCESS_KEY_ID':'', 'SECRET_ACCESS_KEY':'', 'HOSTED_ZONE_ID':''}
 
-# static entries configured under VS DNS
-static_dns_records
-    0 # this is the entry place in the static DNS list
-        fqdn
-            0: xxx.test.cloud
-        type: DNS_RECORD_TXT
-        algorithm: DNS_RECORD_RESPONSE_CONSISTENT_HASH
-        txt_records
-            0
-                text_str: abc
-            1
-                text_str: 123
-
-static_dns_records
-    1
-        fqdn
-            0: xxx.test.cloud
-        type: DNS_RECORD_NS
-        algorithm: DNS_RECORD_RESPONSE_CONSISTENT_HASH
-       ns
-            0
-                nsname: ns1.test.com
-                ipaddress
-                    addr: 1.1.1.1
-                    type: v4
-
-            1
-                nsname: ns2.test.com
-
-static_dns_records
-    2
-        fqdn
-            0: xxx.test.cloud
-        type: DNS_RECORD_A
-        ttl: 123
-        algorithm: DNS_RECORD_RESPONSE_CONSISTENT_HASH
-        ip_address
-            0
-                ip_address
-                    addr: 1.1.1.1
-                    type: V4
-        ip6_address
-            0
-                ip6_address
-                    addr: dead:beaf:ca1f::1
-                    type: V6
-
-static_dns_records
-    3
-        fqdn
-            0: abc.test.cloud
-        type: DNS_RECORD_CNAME
-        ttl: 123
-        algorithm: DNS_RECORD_RESPONSE_CONSISTENT_HASH
-        cname
-            cname: xxx.test.cloud
-
-
-algorithm: DNS_RECORD_RESPONSE_CONSISTENT_HASH, DNS_RECORD_RESPONSE_ROUND_ROBIN
 type: DNS_RECORD_A, DNS_RECORD_TXT, DNS_RECORD_NS, DNS_RECORD_CNAME
 """
 import time
